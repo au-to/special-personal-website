@@ -1,0 +1,96 @@
+/* ═══════════════════════════════════════════════
+   RESPONSIVE.CSS — Breakpoint Overrides
+   Tablet: >= 768px  |  Desktop: >= 1024px
+   ═══════════════════════════════════════════════ */
+
+/* ── Tablet (>= 768px) ── */
+@media (min-width: 768px) {
+  :root {
+    --text-4xl: 5rem;
+    --text-3xl: 3.25rem;
+    --text-2xl: 2.5rem;
+    --content-gutter: 2.5rem;
+    --space-3xl: 10rem;
+  }
+
+  /* About: two-column asymmetrical */
+  .about-content {
+    margin-left: 25%;
+    max-width: none;
+  }
+
+  /* Work: two-column grid */
+  .project-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2xl) var(--space-xl);
+  }
+
+  .project-card {
+    padding-top: var(--space-lg);
+  }
+}
+
+/* ── Desktop (>= 1024px) ── */
+@media (min-width: 1024px) {
+  :root {
+    --text-4xl: 6.5rem;
+    --text-3xl: 3.75rem;
+    --text-2xl: 2.75rem;
+    --text-xl: 1.75rem;
+    --content-gutter: auto;
+  }
+
+  .section-inner {
+    padding: 0;
+  }
+
+  /* Hero: larger spacing */
+  #hero .section-inner {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  .name-en {
+    font-size: var(--text-3xl);
+  }
+
+  .hero-subtitle {
+    font-size: var(--text-xl);
+  }
+
+  /* About: wider offset */
+  .about-content {
+    margin-left: 30%;
+  }
+
+  .about-content p {
+    font-size: var(--text-xl);
+  }
+
+  /* Work: three-column grid */
+  .project-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Section spacing */
+  section {
+    padding: var(--space-3xl) 0;
+  }
+
+  section h2 {
+    margin-bottom: var(--space-3xl);
+  }
+
+  /* Header: fixed with backdrop blur when scrolled */
+  #masthead nav {
+    padding: 0;
+  }
+}
+
+/* ── Large Desktop (>= 1440px) ── */
+@media (min-width: 1440px) {
+  :root {
+    --text-4xl: 7rem;
+  }
+}
